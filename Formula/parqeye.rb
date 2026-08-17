@@ -1,25 +1,25 @@
 class Parqeye < Formula
   desc "Parquet viewer for the command line"
   homepage "https://github.com/kaushiksrini/parqeye"
-  version "0.0.2"
+  version "0.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.0.2/parqeye-aarch64-apple-darwin.tar.xz"
-      sha256 "1995b59f06b5720c46beb2bcdada08c7c568bf0d01b182d7a1e50c7fdc305b9a"
+      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.1.0/parqeye-aarch64-apple-darwin.tar.xz"
+      sha256 "f8f2f41c50ef29f7e9002335a0390d214617a934a9030fc617f02203be4754d8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.0.2/parqeye-x86_64-apple-darwin.tar.xz"
-      sha256 "a9ee1aa6bc0d773d7d3edf8335637411a04412b506dbe081f78990d970c76036"
+      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.1.0/parqeye-x86_64-apple-darwin.tar.xz"
+      sha256 "3cff6deee228f66478c6d257fc3bc2143c44ca2dada495db62011b5c8841c727"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.0.2/parqeye-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a8ae74222514bb8ae61fa58065cc59f5b82b7b31fbc57433ef2ef88b3a085dc1"
+      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.1.0/parqeye-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b01487e1117ee65fad779007b91c2a7d31028304bdf96b48ebdeaea4339329fc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.0.2/parqeye-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "68d03738b0bbe6c70e45008cffd7f1bda194dad921c97359de87b2ab43f51fc3"
+      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.1.0/parqeye-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "fdc2cf96e1b975b05bc9b0c208b47de13dd1cbc14cb2e1f11de4e379d8e2426b"
     end
   end
   license "MIT"
@@ -50,10 +50,18 @@ class Parqeye < Formula
   end
 
   def install
-    bin.install "parqeye" if OS.mac? && Hardware::CPU.arm?
-    bin.install "parqeye" if OS.mac? && Hardware::CPU.intel?
-    bin.install "parqeye" if OS.linux? && Hardware::CPU.arm?
-    bin.install "parqeye" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "parqeye"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "parqeye"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "parqeye"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "parqeye"
+    end
 
     install_binary_aliases!
 
