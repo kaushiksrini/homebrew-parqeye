@@ -1,25 +1,25 @@
 class Parqeye < Formula
   desc "Parquet viewer for the command line"
   homepage "https://github.com/kaushiksrini/parqeye"
-  version "0.1.0"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.1.0/parqeye-aarch64-apple-darwin.tar.xz"
-      sha256 "f8f2f41c50ef29f7e9002335a0390d214617a934a9030fc617f02203be4754d8"
+      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.2.0/parqeye-aarch64-apple-darwin.tar.xz"
+      sha256 "728905b69b6e05a27b73e7c8655f01f12f3130510afecea9dc6236597d325cd2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.1.0/parqeye-x86_64-apple-darwin.tar.xz"
-      sha256 "3cff6deee228f66478c6d257fc3bc2143c44ca2dada495db62011b5c8841c727"
+      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.2.0/parqeye-x86_64-apple-darwin.tar.xz"
+      sha256 "e2f1f312109253565ba2451be051e72ce700caf2f19159380befd16b1c629b2e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.1.0/parqeye-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b01487e1117ee65fad779007b91c2a7d31028304bdf96b48ebdeaea4339329fc"
+      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.2.0/parqeye-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6e9eb7703697f19b84ab5d66136f0dce2a1c4bb0b374e2b0ea7f1b65d47e9727"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.1.0/parqeye-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "fdc2cf96e1b975b05bc9b0c208b47de13dd1cbc14cb2e1f11de4e379d8e2426b"
+      url "https://github.com/kaushiksrini/parqeye/releases/download/v0.2.0/parqeye-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7f9b444665132b827e904fc360455209f37da27417dffcbf7b0741285bd53e24"
     end
   end
   license "MIT"
